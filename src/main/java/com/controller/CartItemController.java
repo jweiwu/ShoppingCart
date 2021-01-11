@@ -81,7 +81,7 @@ public class CartItemController {
 		Product product = productService.getProductById(productId);
 		for (int i = 0; i < cartItems.size(); i++) {
 			CartItem cartItem = cartItems.get(i);
-			if (product.getProductId().equals(cartItem.getProduct().getProductId())) {
+			if (product.getProductId() == cartItem.getProduct().getProductId()) {
 				cartItem.setQuality(cartItem.getQuality() + 1);
 				cartItem.setPrice(cartItem.getQuality() * cartItem.getProduct().getProductPrice());
 				cartItemService.addCartItem(cartItem);
@@ -98,13 +98,13 @@ public class CartItemController {
 
 	@RequestMapping("/cart/removeCartItem/{cartItemId}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	public void removeCartItem(@PathVariable(value = "cartItemId") String cartItemId) {
+	public void removeCartItem(@PathVariable(value = "cartItemId") Integer cartItemId) {
 		cartItemService.removeCartItem(cartItemId);
 	}
 
 	@RequestMapping("/cart/removeAllItems/{cartId}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	public void removeAllCartItems(@PathVariable(value = "cartId") String cartId) {
+	public void removeAllCartItems(@PathVariable(value = "cartId") Integer cartId) {
 		Cart cart = cartService.getCartByCartId(cartId);
 		cartItemService.removeAllCartItems(cart);
 	}

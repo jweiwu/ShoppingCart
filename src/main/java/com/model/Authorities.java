@@ -16,15 +16,15 @@ public class Authorities implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String authorityId;
+	private int authorityId;
 	private String emailId;
 	private String authorities;
 
-	public String getAuthorityId() {
+	public int getAuthorityId() {
 		return authorityId;
 	}
 
-	public void setAuthorityId(String authorityId) {
+	public void setAuthorityId(Integer authorityId) {
 		this.authorityId = authorityId;
 	}
 

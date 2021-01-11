@@ -24,7 +24,7 @@ public class Product implements Serializable {
 	@Id
 	@Column(name = "Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String productId;
+	private int productId;
 	
 	@Column(name="category")
 	private String productCategory;
@@ -52,7 +52,7 @@ public class Product implements Serializable {
 
 	// Getters and Setter
 
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
 
@@ -80,7 +80,7 @@ public class Product implements Serializable {
 		return unitStock;
 	}
 
-	public void setProductId(String productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
@@ -117,7 +117,7 @@ public class Product implements Serializable {
 	}
 
 	// Constructors
-	public Product(String productId, String productCategory, String productDescription, String productManufacturer,
+	public Product(Integer productId, String productCategory, String productDescription, String productManufacturer,
 			String productName, double productPrice, String unitStock) {
 		super();
 		this.productId = productId;

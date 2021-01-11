@@ -24,7 +24,7 @@ public class Cart implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String cartId;
+	private int cartId;
 
 	@OneToOne
 	@JoinColumn(name = "customerId")
@@ -36,11 +36,11 @@ public class Cart implements Serializable {
 
 	private double totalPrice;
 
-	public String getCartId() {
+	public int getCartId() {
 		return cartId;
 	}
 
-	public void setCartId(String cartId) {
+	public void setCartId(Integer cartId) {
 		this.cartId = cartId;
 	}
 
