@@ -29,12 +29,12 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	
-	public Product getProductById(String productId) {
+	public Product getProductById(Integer productId) {
 		return productDao.getProductById(productId);
 	}
 
 	
-	public void deleteProduct(String productId) {
+	public void deleteProduct(Integer productId) {
 		productDao.deleteProduct(productId);
 	}
 	
