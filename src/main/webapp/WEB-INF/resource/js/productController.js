@@ -2,7 +2,7 @@ var app = angular.module("myapp", []).controller(
 		"myController",
 		function($scope, $http) {
 
-			var BASE_PATH = window.location.origin + '/shipieasy';
+			var BASE_PATH = window.location.origin + '/shopieasy';
 
 			$scope.getProductList = function() {
 				$http.get(BASE_PATH + "/getProductsList")
@@ -12,7 +12,7 @@ var app = angular.module("myapp", []).controller(
 			}
 
 			$scope.addToCart = function(productId) {
-				$http.post(BASE_PATH + "/cart/add/" + productId)
+				$http.put(BASE_PATH + "/cart/add/" + productId)
 						.success(function() {
 							alert("Added Successfully");
 						})
