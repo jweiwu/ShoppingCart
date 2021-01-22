@@ -36,7 +36,7 @@
 							<div class="col-sm-6 form-group">
 								<form:label path="productId">Product Id</form:label>
 								<form:input type="text" placeholder="Enter ProductId.."
-									class="form-control" path="productId" disabled="true"></form:input>
+									class="form-control" path="productId" readonly="true"></form:input>
 							</div>
 							<div class="col-sm-6 form-group">
 								<form:label path="productName">Product Name</form:label>
@@ -47,18 +47,14 @@
 						<div class="form-group">
 							<form:label path="productDescription">Product Description</form:label>
 							<form:textarea type="text" placeholder="Enter First Name.."
-								class="form-control" path="productId"></form:textarea>
+								class="form-control" path="productDescription"></form:textarea>
 						</div>
 						<div class="form-group">
 							<form:label path="productCategory">Product Category</form:label>
-							<form:radiobutton path="productCategory" value="Android" />
-							Android
-							<form:radiobutton path="productCategory" value="Windows" />
-							Windows
-							<form:radiobutton path="productCategory" value="Linux" />
-							Linux
-							<form:radiobutton path="productCategory" value="Mac" />
-							Mac
+							<form:radiobutton path="productCategory" value="Smartphone" label="Smartphone"/>
+							<form:radiobutton path="productCategory" value="Tablet" label="Tablet"/>
+							<form:radiobutton path="productCategory" value="Notebook" label="Notebook"/>
+							<form:radiobutton path="productCategory" value="Computer" label="Computer"/>
 						</div>
 						<div class="row">
 							<div class="col-sm-4 form-group">

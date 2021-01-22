@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
 <link rel="icon" type="image/x-icon" href="<c:url value="/resource/images/favicon1.png"/>" />
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<script src="js/jquery-3.1.0.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>" />
+<script src="<c:url value="/resource/js/jquery.js"/>"></script>
+<script src="<c:url value="/resource/bootstrap/js/bootstrap.min.js"/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resource/css/header.css"/>" />
 <style type="text/css">
 @media ( min-width : 1200px) .container {
 	width

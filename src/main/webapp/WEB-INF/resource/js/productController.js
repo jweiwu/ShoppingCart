@@ -2,7 +2,7 @@ var app = angular.module("myapp", []).controller(
 		"myController",
 		function($scope, $http) {
 
-			var BASE_PATH = window.location.origin;
+			var BASE_PATH = window.location.origin + '/shipieasy';
 
 			$scope.getProductList = function() {
 				$http.get(BASE_PATH + "/getProductsList")
@@ -12,7 +12,7 @@ var app = angular.module("myapp", []).controller(
 			}
 
 			$scope.addToCart = function(productId) {
-				$http.put(BASE_PATH + "/cart/add/" + productId)
+				$http.post(BASE_PATH + "/cart/add/" + productId)
 						.success(function() {
 							alert("Added Successfully");
 						})
@@ -45,6 +45,9 @@ var app = angular.module("myapp", []).controller(
 			}
 
 			$scope.calculateGrandTotal = function() {
+				if (!$scope.carts) {
+					return 0.0;
+				}
 				var grandTotal = 0.0;
 				for (var i = 0; i < $scope.carts.cartItem.length; i++)
 					grandTotal = grandTotal + $scope.carts.cartItem[i].price;
